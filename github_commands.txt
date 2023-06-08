@@ -1,3 +1,5 @@
+$ git status
+# this command will tell you the untracked or tracked files in your folders, red is untracked, while green is tracked and ready to be commited/pushed
 $ git add .
 # this add all the new files to the commit
 $ git commit -am 'write some message'
