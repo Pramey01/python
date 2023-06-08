@@ -1,0 +1,7 @@
+$ git add .
+# this add all the new files to the commit
+$ git commit -am 'write some message'
+# this command adds an explaination on what changes you've made to the files
+$ git push
+# updates the stages changes to your github account, if it asks for the password for an ssh key passphrase, just press enter, there is no password
+
