@@ -1,33 +1,32 @@
 #!/bin/python3
 
 #Excersise 1 & 2
-H = input('Enter hours clocked: ')
-R = input('Enter rate: ')
+hours = float(input('Enter hours clocked: '))
+rate = float(input('Enter rate: '))
 try: 
-    Hours = float(H)
-    Rate = float(R)
-    if Hours <= 40:
-        Pay = Hours * Rate
-        print(Pay)
+    if hours <= 40:
+        pay = hours * rate
+        print(pay)
     else:
-        Pay2 = ((Hours - 40) * (Rate * 1.5)) + (40 * Rate)
-        print(Pay2)
+        #naming variables can be difficult at the beginning but inputing pay2 can be confusing. Especially if someone else is looking at the code in the future or pay2 is called somewhere farther along the program away from its declaration
+        overtimePay = ((hours - 40) * (rate * 1.5)) + (40 * rate)
+        print(overtimePay)
 except: 
     print('Error, please enter numeric input ')
 
 #Excersise 3
-Grade = input('Enter score between 0.0 and 1.0: ')
+grade = input('Enter score between 0.0 and 1.0: ')
 try:
-    Score = float(Grade)
-    if Score >= 0.9:
+    score = float(grade)
+    if score >= 0.9:
         print('A')
-    elif Score >= 0.8:
+    elif score >= 0.8:
         print('B')
-    elif Score >= 0.7:
+    elif score >= 0.7:
         print('C')
-    elif Score >= 0.6:
+    elif score >= 0.6:
         print('D')
-    elif Score < 0.6:
+    elif score < 0.6:
         print('F')
 except:
     print('Not a score')
