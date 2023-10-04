@@ -5,7 +5,7 @@
 #As the complexity of the application raise these practices will make maintenance and collaboration better
 #most imporants can have aliases. These can make it easier to type or explain what the library is doing.
 #Here is okay to have imported the library without an alias since you are using the entire library and none of the specific sub-functionality
-import random 
+import random
 
 for i in range(10):
 #python likes to use single character variables. This is not the best practice generally 
@@ -14,15 +14,13 @@ for i in range(10):
 
 #Exersise 2 & 3
 #Consider using a loop in the function so you don't have to call the function twice
+#the function print lyrics will print the statement as many times as the range defines
 def print_lyrics():
-    print ("I'm a lumberjack, and I'm okay.")
-    print('I sleep all night and I work all day.')
+    for i in range(5):
+        print ("I'm a lumberjack, and I'm okay.")
+        print('I sleep all night and I work all day.')
 
-def repeat_lyrics():
-    print_lyrics()
-    print_lyrics()
-
-repeat_lyrics()
+print_lyrics()
 
 #Exersise 4
 #D
@@ -31,6 +29,9 @@ repeat_lyrics()
 #D
 
 #Exersise 6
+hours = input('Enter hours worked: ')
+rate = input("Whatcha makin' bacon: ")
+#user inputs hours worked and wage and the computepay function gets their earnings also calculates overtime
 def compute_pay(hours,rate):
     try: 
         if hours <= 40:
@@ -40,11 +41,8 @@ def compute_pay(hours,rate):
             overtimePay = ((hours - 40) * (rate * 1.5)) + (40 * rate)
             print(overtimePay)
     except: 
-        #This error will never run since you are not prompting the user for input, therefore they are incapable of inputing the wrong type of information
         print('Error, please enter numeric input ')
-#add a user input for this with something like inputeHours = input('gimme the hours ye worked'), inputRate = input('how much is your time worth?')
-#then you can call the function compute_pay(inputHours, inputRate) 
-compute_pay(45,10)
+compute_pay(hours,rate)
 
 #Exersise 7
 def compute_grade():

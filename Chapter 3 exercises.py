@@ -8,7 +8,8 @@ try:
         pay = hours * rate
         print(pay)
     else:
-        #naming variables can be difficult at the beginning but inputing pay2 can be confusing. Especially if someone else is looking at the code in the future or pay2 is called somewhere farther along the program away from its declaration
+        # naming variables can be difficult at the beginning but inputing pay2 can be confusing. 
+        # Especially if someone else is looking at the code in the future or pay2 is called somewhere farther along the program away from its declaration
         overtimePay = ((hours - 40) * (rate * 1.5)) + (40 * rate)
         print(overtimePay)
 except: 
@@ -30,6 +31,6 @@ try:
         print('F')
 except:
     print('Not a score')
-    
+
 
 
